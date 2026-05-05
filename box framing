@@ -1,0 +1,12 @@
+lines = []
+n = int(input("how many lines: "))
+
+for i in range(n):
+    lines.append(input())
+
+max_len = max(len(line) for line in lines)
+
+print("*" * (max_len + 4))
+for line in lines:
+    print("* " + line.ljust(max_len) + " *")
+print("*" * (max_len + 4))
